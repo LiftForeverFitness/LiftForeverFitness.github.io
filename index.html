@@ -1,1 +1,575 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c3{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c2{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 doc-content"><p class="c1"><span class="c0">&lt;!DOCTYPE html&gt;</span></p><p class="c1"><span class="c0">&lt;html lang=&quot;en&quot;&gt;</span></p><p class="c1"><span class="c0">&lt;head&gt;</span></p><p class="c1"><span class="c0">&lt;meta charset=&quot;UTF-8&quot;&gt;</span></p><p class="c1"><span class="c0">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></p><p class="c1"><span class="c0">&lt;title&gt;Lift Forever &mdash; Online Personal Training&lt;/title&gt;</span></p><p class="c1"><span class="c0">&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;</span></p><p class="c1"><span class="c0">&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;</span></p><p class="c1"><span class="c0">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&amp;family=Work+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</span></p><p class="c1"><span class="c0">&lt;style&gt;</span></p><p class="c1"><span class="c0">&nbsp; :root{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --cream:#F3EFE3;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --paper:#FBF8F1;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --forest:#1E3A2B;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --forest-deep:#152B20;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --amber:#E8A63D;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --coral:#F0603F;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --ink:#20241D;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --ink-soft:#4B5045;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --line: rgba(32,36,29,0.12);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; --radius: 4px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; *{box-sizing:border-box;}</span></p><p class="c1"><span class="c0">&nbsp; html{scroll-behavior:smooth;}</span></p><p class="c1"><span class="c0">&nbsp; body{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin:0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--cream);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--ink);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;Work Sans&#39;, sans-serif;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:16px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; line-height:1.55;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; -webkit-font-smoothing:antialiased;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; h1,h2,h3{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;Fraunces&#39;, serif;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-weight:700;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin:0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; letter-spacing:-0.01em;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .eyebrow{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;IBM Plex Mono&#39;, monospace;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.72rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; letter-spacing:0.14em;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; text-transform:uppercase;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--ink-soft);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; a{color:inherit;}</span></p><p class="c1"><span class="c0">&nbsp; .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:640px){ .wrap{padding:0 20px;} }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- NAV ---- */</span></p><p class="c1"><span class="c0">&nbsp; header.site{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; position:sticky; top:0; z-index:50;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:rgba(243,239,227,0.9);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; backdrop-filter:blur(8px);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-bottom:1px solid var(--line);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; nav{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:flex; align-items:center; justify-content:space-between;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:20px 0;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .logo{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;Fraunces&#39;, serif;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-weight:700;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:1.35rem;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .logo em{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-style:italic;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-weight:500;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--coral);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .nav-links{display:flex; gap:32px; align-items:center; list-style:none; margin:0; padding:0;}</span></p><p class="c1"><span class="c0">&nbsp; .nav-links a{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; text-decoration:none; font-weight:500; font-size:0.95rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding-bottom:2px; border-bottom:1px solid transparent;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; transition:border-color .2s ease;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .nav-links a:hover{border-color:var(--ink);}</span></p><p class="c1"><span class="c0">&nbsp; .nav-cta{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:inline-block;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--forest);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--paper);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:10px 20px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-radius:var(--radius);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; text-decoration:none;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-weight:600;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.9rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; transition:transform .15s ease, background .2s ease;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .nav-cta:hover{background:var(--forest-deep); transform:translateY(-1px);}</span></p><p class="c1"><span class="c0">&nbsp; .menu-toggle{display:none;}</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:800px){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .nav-links{display:none;}</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .menu-toggle{display:block; background:none; border:none; font-family:&#39;IBM Plex Mono&#39;,monospace; font-size:0.85rem; cursor:pointer;}</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- HERO ---- */</span></p><p class="c1"><span class="c0">&nbsp; .hero{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:88px 0 96px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .hero .wrap{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:grid;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; grid-template-columns:1.05fr 0.95fr;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; gap:64px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; align-items:center;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:900px){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .hero .wrap{grid-template-columns:1fr; gap:56px;}</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .hero{padding:48px 0 64px;}</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .hero h1{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:clamp(2.4rem, 5vw, 3.6rem);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; line-height:1.06;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin:18px 0 22px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .hero h1 .accent{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-style:italic;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-weight:600;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--forest);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .hero p.lede{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:1.12rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--ink-soft);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; max-width:46ch;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin-bottom:32px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .cta-row{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:28px;}</span></p><p class="c1"><span class="c0">&nbsp; .btn{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:inline-flex; align-items:center; gap:8px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:14px 26px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-radius:var(--radius);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-weight:600;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.98rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; text-decoration:none;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; cursor:pointer;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border:1px solid transparent;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; transition:transform .15s ease, background .2s ease, border-color .2s ease;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .btn-primary{background:var(--coral); color:var(--paper);}</span></p><p class="c1"><span class="c0">&nbsp; .btn-primary:hover{transform:translateY(-2px); background:#e0532f;}</span></p><p class="c1"><span class="c0">&nbsp; .btn-ghost{background:transparent; color:var(--ink); border-color:var(--ink);}</span></p><p class="c1"><span class="c0">&nbsp; .btn-ghost:hover{border-color:var(--forest); color:var(--forest);}</span></p><p class="c1"><span class="c0">&nbsp; .trust-line{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;IBM Plex Mono&#39;, monospace;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.78rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--ink-soft);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; letter-spacing:0.02em;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- Signature bar visual ---- */</span></p><p class="c1"><span class="c0">&nbsp; .lift-graph{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--forest);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-radius:10px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:36px 32px 28px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; position:relative;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; overflow:hidden;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .lift-graph .cap{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;IBM Plex Mono&#39;, monospace;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:#BFD3C4;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.72rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; letter-spacing:0.1em;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; text-transform:uppercase;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin-bottom:22px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:flex; justify-content:space-between;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .bars{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:flex; align-items:flex-end; gap:10px; height:180px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .bars .bar{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; flex:1;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:#3E6A50;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-radius:3px 3px 0 0;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; height:8%;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; position:relative;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; transition:height 1s cubic-bezier(.2,.8,.2,1);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .bars .bar.lit{background:var(--amber);}</span></p><p class="c1"><span class="c0">&nbsp; .bars .bar span{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; position:absolute; bottom:-24px; left:0; right:0; text-align:center;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;IBM Plex Mono&#39;, monospace; font-size:0.62rem; color:#8FA895;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .lift-graph .caption{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin-top:44px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:#DCE6DE;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.9rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; max-width:36ch;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .lift-graph .caption strong{color:var(--amber); font-weight:600;}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; @media (prefers-reduced-motion: reduce){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .bars .bar{transition:none;}</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- Philosophy strip ---- */</span></p><p class="c1"><span class="c0">&nbsp; .philosophy{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--forest);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--paper);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:72px 0;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .philosophy .grid{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:grid;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; grid-template-columns:repeat(3, 1fr);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; gap:40px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:800px){ .philosophy .grid{grid-template-columns:1fr; gap:32px;} }</span></p><p class="c1"><span class="c0">&nbsp; .philosophy h3{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:1.5rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-weight:600;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; line-height:1.3;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin-bottom:10px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .philosophy p{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:#C7D6CB;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.96rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin:0;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .philosophy .mark{color:var(--amber); font-family:&#39;Fraunces&#39;,serif; font-style:italic; font-size:1.1rem;}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- How it works ---- */</span></p><p class="c1"><span class="c0">&nbsp; .how{padding:96px 0;}</span></p><p class="c1"><span class="c0">&nbsp; .section-head{max-width:56ch; margin-bottom:56px;}</span></p><p class="c1"><span class="c0">&nbsp; .section-head h2{font-size:clamp(1.8rem,3vw,2.4rem); margin-top:10px;}</span></p><p class="c1"><span class="c0">&nbsp; .steps{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:grid;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; grid-template-columns:repeat(4,1fr);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; gap:28px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:900px){ .steps{grid-template-columns:1fr 1fr;} }</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:560px){ .steps{grid-template-columns:1fr;} }</span></p><p class="c1"><span class="c0">&nbsp; .step{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--paper);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border:1px solid var(--line);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-radius:var(--radius);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:26px 22px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .step .num{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;IBM Plex Mono&#39;, monospace;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--coral);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.85rem;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; margin-bottom:14px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:block;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .step h3{font-size:1.08rem; font-weight:600; margin-bottom:8px;}</span></p><p class="c1"><span class="c0">&nbsp; .step p{font-size:0.9rem; color:var(--ink-soft); margin:0;}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- Programs ---- */</span></p><p class="c1"><span class="c0">&nbsp; .programs{background:var(--paper); padding:96px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}</span></p><p class="c1"><span class="c0">&nbsp; .cards{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:grid;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; grid-template-columns:repeat(3,1fr);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; gap:24px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:900px){ .cards{grid-template-columns:1fr;} }</span></p><p class="c1"><span class="c0">&nbsp; .card{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border:1px solid var(--line);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-radius:6px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:32px 28px;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--cream);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:flex; flex-direction:column;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .card.featured{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--forest);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; color:var(--paper);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-color:var(--forest);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; transform:translateY(-8px);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .card.featured .price, .card.featured h3{color:var(--paper);}</span></p><p class="c1"><span class="c0">&nbsp; .card.featured .desc{color:#C7D6CB;}</span></p><p class="c1"><span class="c0">&nbsp; .card.featured .feat-list li{color:#DCE6DE; border-color:rgba(255,255,255,0.14);}</span></p><p class="c1"><span class="c0">&nbsp; .card .tier-label{font-family:&#39;IBM Plex Mono&#39;, monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft);}</span></p><p class="c1"><span class="c0">&nbsp; .card.featured .tier-label{color:#9CC1A5;}</span></p><p class="c1"><span class="c0">&nbsp; .card h3{margin:10px 0 6px; font-size:1.4rem;}</span></p><p class="c1"><span class="c0">&nbsp; .card .price{font-family:&#39;Fraunces&#39;,serif; font-weight:700; font-size:1.9rem; margin-bottom:14px;}</span></p><p class="c1"><span class="c0">&nbsp; .card .price span{font-family:&#39;Work Sans&#39;,sans-serif; font-size:0.85rem; font-weight:500; color:var(--ink-soft);}</span></p><p class="c1"><span class="c0">&nbsp; .card .desc{font-size:0.92rem; color:var(--ink-soft); margin-bottom:22px;}</span></p><p class="c1"><span class="c0">&nbsp; .feat-list{list-style:none; margin:0 0 28px; padding:0; flex:1;}</span></p><p class="c1"><span class="c0">&nbsp; .feat-list li{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-size:0.88rem; padding:10px 0; border-top:1px solid var(--line);</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .feat-list li:first-child{border-top:none;}</span></p><p class="c1"><span class="c0">&nbsp; .card .btn{justify-content:center; width:100%;}</span></p><p class="c1"><span class="c0">&nbsp; .card.featured .btn-primary{background:var(--amber); color:var(--forest-deep);}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- Testimonials ---- */</span></p><p class="c1"><span class="c0">&nbsp; .testimonials{padding:96px 0;}</span></p><p class="c1"><span class="c0">&nbsp; .t-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:900px){ .t-grid{grid-template-columns:1fr;} }</span></p><p class="c1"><span class="c0">&nbsp; .t-card{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:var(--paper);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border-radius:var(--radius);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; border:1px solid var(--line);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; padding:26px 24px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .t-card p.quote{font-size:0.98rem; margin:0 0 18px; color:var(--ink);}</span></p><p class="c1"><span class="c0">&nbsp; .t-card .who{font-family:&#39;IBM Plex Mono&#39;, monospace; font-size:0.75rem; color:var(--ink-soft);}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- About coach ---- */</span></p><p class="c1"><span class="c0">&nbsp; .about{background:var(--forest); color:var(--paper); padding:96px 0;}</span></p><p class="c1"><span class="c0">&nbsp; .about .wrap{display:grid; grid-template-columns:0.4fr 0.6fr; gap:56px; align-items:center;}</span></p><p class="c1"><span class="c0">&nbsp; @media (max-width:800px){ .about .wrap{grid-template-columns:1fr;} }</span></p><p class="c1"><span class="c0">&nbsp; .avatar{</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; width:100%; aspect-ratio:1; border-radius:50%;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; background:linear-gradient(135deg, var(--amber), var(--coral));</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; display:flex; align-items:center; justify-content:center;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; font-family:&#39;Fraunces&#39;,serif; font-weight:700; font-size:3rem; color:var(--forest-deep);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; max-width:260px;</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; .about h2{font-size:clamp(1.7rem,3vw,2.2rem); margin-bottom:16px; color:var(--paper);}</span></p><p class="c1"><span class="c0">&nbsp; .about p{color:#DCE6DE; font-size:1rem; margin-bottom:14px; max-width:56ch;}</span></p><p class="c1"><span class="c0">&nbsp; .about .cred{font-family:&#39;IBM Plex Mono&#39;,monospace; font-size:0.78rem; color:#9CC1A5; margin-bottom:20px;}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- Final CTA ---- */</span></p><p class="c1"><span class="c0">&nbsp; .final-cta{padding:110px 0; text-align:center;}</span></p><p class="c1"><span class="c0">&nbsp; .final-cta h2{font-size:clamp(2rem,4vw,3rem); margin:0 0 20px;}</span></p><p class="c1"><span class="c0">&nbsp; .final-cta p{color:var(--ink-soft); max-width:46ch; margin:0 auto 36px;}</span></p><p class="c1"><span class="c0">&nbsp; .final-cta .cta-row{justify-content:center;}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; /* ---- Footer ---- */</span></p><p class="c1"><span class="c0">&nbsp; footer{border-top:1px solid var(--line); padding:40px 0;}</span></p><p class="c1"><span class="c0">&nbsp; footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}</span></p><p class="c1"><span class="c0">&nbsp; footer .logo{font-size:1.05rem;}</span></p><p class="c1"><span class="c0">&nbsp; footer .flinks{display:flex; gap:24px; list-style:none; margin:0; padding:0; font-size:0.85rem;}</span></p><p class="c1"><span class="c0">&nbsp; footer .flinks a{text-decoration:none;}</span></p><p class="c1"><span class="c0">&nbsp; footer .fine{font-family:&#39;IBM Plex Mono&#39;,monospace; font-size:0.72rem; color:var(--ink-soft); margin-top:8px;}</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}</span></p><p class="c1"><span class="c0">&nbsp; .reveal.in{opacity:1; transform:translateY(0);}</span></p><p class="c1"><span class="c0">&nbsp; @media (prefers-reduced-motion: reduce){</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; .reveal{opacity:1; transform:none; transition:none;}</span></p><p class="c1"><span class="c0">&nbsp; }</span></p><p class="c1"><span class="c0">&lt;/style&gt;</span></p><p class="c1"><span class="c0">&lt;/head&gt;</span></p><p class="c1"><span class="c0">&lt;body&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;header class=&quot;site&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;nav&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;logo&quot;&gt;Lift &lt;em&gt;Forever&lt;/em&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;ul class=&quot;nav-links&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=&quot;#how&quot;&gt;How it works&lt;/a&gt;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=&quot;#programs&quot;&gt;Programs&lt;/a&gt;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=&quot;#cta&quot; class=&quot;nav-cta&quot;&gt;Book a free consult&lt;/a&gt;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/nav&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/header&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section class=&quot;hero&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;eyebrow&quot;&gt;Online personal training&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h1&gt;Strong looks different on everyone&lt;br&gt;&lt;span class=&quot;accent&quot;&gt;Let&rsquo;s find yours&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p class=&quot;lede&quot;&gt;No fitness background required. No home gym required. Just a coach in your corner, a plan built around your actual life, and small lifts that add up &mdash; for good, this time.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;cta-row&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#cta&quot; class=&quot;btn btn-primary&quot;&gt;Book a free consult &rarr;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#how&quot; class=&quot;btn btn-ghost&quot;&gt;See how it works&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p class=&quot;trust-line&quot;&gt;CERTIFIED PERSONAL TRAINER &middot; 100% VIRTUAL &middot; CHECK-INS THAT ACTUALLY HAPPEN&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;lift-graph&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;cap&quot;&gt;&lt;span&gt;Consistency, tracked&lt;/span&gt;&lt;span&gt;12 weeks&lt;/span&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;bars&quot; id=&quot;bars&quot;&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p class=&quot;caption&quot;&gt;This is what results actually look like: &lt;strong&gt;small, steady lifts&lt;/strong&gt; &mdash; not a straight line, not a miracle month. Just forever.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section class=&quot;philosophy&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;grid&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;mark&quot;&gt;01&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;You don&#39;t have to be &quot;advanced&quot; to start.&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Every program starts from where you actually are, not where a workout app assumes you should be.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;mark&quot;&gt;02&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;You don&#39;t need a home gym.&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Bodyweight, bands, dumbbells, a commercial gym &mdash; plans built around your equipment, not the other way around.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;mark&quot;&gt;03&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;You need someone who notices when you go quiet.&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Real check-ins, real adjustments. If a week goes sideways, the plan bends &mdash; it doesn&#39;t just sit there judging you.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section class=&quot;how&quot; id=&quot;how&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;section-head&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;eyebrow&quot;&gt;How it works&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Four steps. No guesswork.&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;steps&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;step reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;num&quot;&gt;01&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Free consult&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;A real conversation about your goals, your schedule, and what&#39;s actually gotten in the way before.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;step reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;num&quot;&gt;02&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Custom program&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Training plan built for your equipment and time, with nutrition guidance that fits your plate &mdash; vegan or not.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;step reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;num&quot;&gt;03&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Weekly check-ins&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Form checks over video, honest feedback, and a plan that adjusts as your life does.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;step reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;num&quot;&gt;04&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Keep lifting&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Recalibrate every few weeks so progress doesn&#39;t stall &mdash; and doesn&#39;t burn you out either.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section class=&quot;programs&quot; id=&quot;programs&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;section-head&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;eyebrow&quot;&gt;Programs&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Pick a level of support, not a level of difficulty.&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;cards&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;tier-label&quot;&gt;Foundations&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Start&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;price&quot;&gt;$89&lt;span&gt; / month&lt;/span&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;desc&quot;&gt;For anyone who wants a clear plan and doesn&#39;t need daily hand-holding.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;feat-list&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Custom training program&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Bi-weekly check-in&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Exercise video library&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Message support, 48hr reply&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#cta&quot; class=&quot;btn btn-ghost&quot;&gt;Get started&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card featured reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;tier-label&quot;&gt;Most popular&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Build&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;price&quot;&gt;$159&lt;span&gt; / month&lt;/span&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;desc&quot;&gt;The full partnership &mdash; for people ready to make this stick.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;feat-list&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Everything in Start&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Weekly check-in + form review&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Nutrition guidance&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Message support, same-day reply&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Plan adjusts every 3 weeks&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#cta&quot; class=&quot;btn btn-primary&quot;&gt;Get started&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;tier-label&quot;&gt;1-on-1&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Thrive&lt;/h3&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;price&quot;&gt;$249&lt;span&gt; / month&lt;/span&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;desc&quot;&gt;Live sessions, for people who train better with someone watching the clock.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;feat-list&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Everything in Build&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;2 live virtual sessions / week&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Direct messaging, daily&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Priority scheduling&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;a href=&quot;#cta&quot; class=&quot;btn btn-ghost&quot;&gt;Get started&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section class=&quot;testimonials&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;section-head&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;eyebrow&quot;&gt;From people who started exactly like you&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Not athletes. Just consistent.&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;t-grid&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;t-card reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;quote&quot;&gt;&quot;Thanks to Mat&rsquo;s training, the Joker doesn&rsquo;t stand a chance.&quot;&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;who&quot;&gt;&mdash; Batman, Build program, 7 months in&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;t-card reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;quote&quot;&gt;&quot;I was worried about the workouts taking forever, but they&rsquo;re over in a me.&quot;&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;who&quot;&gt;&mdash; The Flash, Foundations program, 1 year in&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;t-card reveal&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;quote&quot;&gt;&quot;Wow, I am so glad that I made the choice to sign up.&quot;&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;who&quot;&gt;&mdash; You, 4 months from now&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section class=&quot;about&quot; id=&quot;about&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;avatar&quot;&gt;LF&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;span class=&quot;eyebrow&quot; style=&quot;color:#9CC1A5;&quot;&gt;Your coach&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Hi, I&#39;m Mat.&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p class=&quot;cred&quot;&gt;CERTIFIED PERSONAL TRAINER&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;I got into this work because I&#39;ve seen too many people get scared off fitness by programs built for people who were already fit. Lift Forever exists for everyone else &mdash; the person starting from zero, coming back after a long break, or just tired of plans that don&#39;t fit their actual life.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;Every program is built around you: your schedule, your equipment, your relationship with food. My job is to make the next lift a little easier than the last one &mdash; and to still be doing this with you a year from now.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;a href=&quot;#cta&quot; class=&quot;btn btn-primary&quot;&gt;Book a free consult &rarr;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;section class=&quot;final-cta&quot; id=&quot;cta&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;span class=&quot;eyebrow&quot;&gt;Ready when you are&lt;/span&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;h2&gt;Your first lift is a 20-minute call.&lt;/h2&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;p&gt;No pressure, no sales script &mdash; just a conversation about where you&#39;re starting from and whether this is a good fit.&lt;/p&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;cta-row&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Book your free consult &rarr;&lt;/a&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/section&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;footer&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;div class=&quot;wrap&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;logo&quot;&gt;Lift &lt;em&gt;Forever&lt;/em&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;fine&quot;&gt;&copy; 2026 Lift Forever. Online personal training.&lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;ul class=&quot;flinks&quot;&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=&quot;#how&quot;&gt;How it works&lt;/a&gt;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=&quot;#programs&quot;&gt;Programs&lt;/a&gt;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &lt;/ul&gt;</span></p><p class="c1"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0">&lt;/footer&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;script&gt;</span></p><p class="c1"><span class="c0">&nbsp; // Build the signature &quot;lift&quot; bar graph: 12 bars, gently ascending with noise,</span></p><p class="c1"><span class="c0">&nbsp; // last bar lit as the &quot;current&quot; week.</span></p><p class="c1"><span class="c0">&nbsp; const barsEl = document.getElementById(&#39;bars&#39;);</span></p><p class="c1"><span class="c0">&nbsp; const heights = [22,18,30,26,38,34,46,42,55,50,64,78];</span></p><p class="c1"><span class="c0">&nbsp; heights.forEach((h, i) =&gt; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; const bar = document.createElement(&#39;div&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; bar.className = &#39;bar&#39; + (i === heights.length - 1 ? &#39; lit&#39; : &#39;&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; bar.style.height = &#39;8%&#39;;</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; if (i % 3 === 0) {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const label = document.createElement(&#39;span&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; label.textContent = &#39;wk &#39; + (i + 1);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; bar.appendChild(label);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; barsEl.appendChild(bar);</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; requestAnimationFrame(() =&gt; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; setTimeout(() =&gt; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; const barEls = barsEl.querySelectorAll(&#39;.bar&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; barEls.forEach((bar, i) =&gt; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; setTimeout(() =&gt; { bar.style.height = heights[i] + &#39;%&#39;; }, i * 60);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; }, 150);</span></p><p class="c1"><span class="c0">&nbsp; });</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&nbsp; // Scroll reveal</span></p><p class="c1"><span class="c0">&nbsp; const revealEls = document.querySelectorAll(&#39;.reveal&#39;);</span></p><p class="c1"><span class="c0">&nbsp; const io = new IntersectionObserver((entries) =&gt; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; entries.forEach(entry =&gt; {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; if (entry.isIntersecting) {</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; entry.target.classList.add(&#39;in&#39;);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; io.unobserve(entry.target);</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0">&nbsp; &nbsp; });</span></p><p class="c1"><span class="c0">&nbsp; }, { threshold: 0.15 });</span></p><p class="c1"><span class="c0">&nbsp; revealEls.forEach(el =&gt; io.observe(el));</span></p><p class="c1"><span class="c0">&lt;/script&gt;</span></p><p class="c1 c2"><span class="c0"></span></p><p class="c1"><span class="c0">&lt;/body&gt;</span></p><p class="c1"><span class="c0">&lt;/html&gt;</span></p><p class="c1 c2"><span class="c0"></span></p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lift Forever — Online Personal Training</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F3EFE3;
+    --paper:#FBF8F1;
+    --forest:#1E3A2B;
+    --forest-deep:#152B20;
+    --amber:#E8A63D;
+    --coral:#F0603F;
+    --ink:#20241D;
+    --ink-soft:#4B5045;
+    --line: rgba(32,36,29,0.12);
+    --radius: 4px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  a{color:inherit;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  /* ---- NAV ---- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,239,227,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 0;
+  }
+  .logo{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.35rem;
+  }
+  .logo em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--coral);
+  }
+  .nav-links{display:flex; gap:32px; align-items:center; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    text-decoration:none; font-weight:500; font-size:0.95rem;
+    padding-bottom:2px; border-bottom:1px solid transparent;
+    transition:border-color .2s ease;
+  }
+  .nav-links a:hover{border-color:var(--ink);}
+  .nav-cta{
+    display:inline-block;
+    background:var(--forest);
+    color:var(--paper);
+    padding:10px 20px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.9rem;
+    transition:transform .15s ease, background .2s ease;
+  }
+  .nav-cta:hover{background:var(--forest-deep); transform:translateY(-1px);}
+  .menu-toggle{display:none;}
+  @media (max-width:800px){
+    .nav-links{display:none;}
+    .menu-toggle{display:block; background:none; border:none; font-family:'IBM Plex Mono',monospace; font-size:0.85rem; cursor:pointer;}
+  }
+
+  /* ---- HERO ---- */
+  .hero{
+    padding:88px 0 96px;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
+    align-items:center;
+  }
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr; gap:56px;}
+    .hero{padding:48px 0 64px;}
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    line-height:1.06;
+    margin:18px 0 22px;
+  }
+  .hero h1 .accent{
+    font-style:italic;
+    font-weight:600;
+    color:var(--forest);
+  }
+  .hero p.lede{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin-bottom:32px;
+  }
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:28px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 26px;
+    border-radius:var(--radius);
+    font-weight:600;
+    font-size:0.98rem;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform .15s ease, background .2s ease, border-color .2s ease;
+  }
+  .btn-primary{background:var(--coral); color:var(--paper);}
+  .btn-primary:hover{transform:translateY(-2px); background:#e0532f;}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--forest); color:var(--forest);}
+  .trust-line{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
+  }
+
+  /* ---- Signature bar visual ---- */
+  .lift-graph{
+    background:var(--forest);
+    border-radius:10px;
+    padding:36px 32px 28px;
+    position:relative;
+    overflow:hidden;
+  }
+  .lift-graph .cap{
+    font-family:'IBM Plex Mono', monospace;
+    color:#BFD3C4;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-bottom:22px;
+    display:flex; justify-content:space-between;
+  }
+  .bars{
+    display:flex; align-items:flex-end; gap:10px; height:180px;
+  }
+  .bars .bar{
+    flex:1;
+    background:#3E6A50;
+    border-radius:3px 3px 0 0;
+    height:8%;
+    position:relative;
+    transition:height 1s cubic-bezier(.2,.8,.2,1);
+  }
+  .bars .bar.lit{background:var(--amber);}
+  .bars .bar span{
+    position:absolute; bottom:-24px; left:0; right:0; text-align:center;
+    font-family:'IBM Plex Mono', monospace; font-size:0.62rem; color:#8FA895;
+  }
+  .lift-graph .caption{
+    margin-top:44px;
+    color:#DCE6DE;
+    font-size:0.9rem;
+    max-width:36ch;
+  }
+  .lift-graph .caption strong{color:var(--amber); font-weight:600;}
+
+  @media (prefers-reduced-motion: reduce){
+    .bars .bar{transition:none;}
+  }
+
+  /* ---- Philosophy strip ---- */
+  .philosophy{
+    background:var(--forest);
+    color:var(--paper);
+    padding:72px 0;
+  }
+  .philosophy .grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:40px;
+  }
+  @media (max-width:800px){ .philosophy .grid{grid-template-columns:1fr; gap:32px;} }
+  .philosophy h3{
+    font-size:1.5rem;
+    font-weight:600;
+    line-height:1.3;
+    margin-bottom:10px;
+  }
+  .philosophy p{
+    color:#C7D6CB;
+    font-size:0.96rem;
+    margin:0;
+  }
+  .philosophy .mark{color:var(--amber); font-family:'Fraunces',serif; font-style:italic; font-size:1.1rem;}
+
+  /* ---- How it works ---- */
+  .how{padding:96px 0;}
+  .section-head{max-width:56ch; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.8rem,3vw,2.4rem); margin-top:10px;}
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+  }
+  @media (max-width:900px){ .steps{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .steps{grid-template-columns:1fr;} }
+  .step{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 22px;
+  }
+  .step .num{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--coral);
+    font-size:0.85rem;
+    margin-bottom:14px;
+    display:block;
+  }
+  .step h3{font-size:1.08rem; font-weight:600; margin-bottom:8px;}
+  .step p{font-size:0.9rem; color:var(--ink-soft); margin:0;}
+
+  /* ---- Programs ---- */
+  .programs{background:var(--paper); padding:96px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  @media (max-width:900px){ .cards{grid-template-columns:1fr;} }
+  .card{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:32px 28px;
+    background:var(--cream);
+    display:flex; flex-direction:column;
+  }
+  .card.featured{
+    background:var(--forest);
+    color:var(--paper);
+    border-color:var(--forest);
+    transform:translateY(-8px);
+  }
+  .card.featured .price, .card.featured h3{color:var(--paper);}
+  .card.featured .desc{color:#C7D6CB;}
+  .card.featured .feat-list li{color:#DCE6DE; border-color:rgba(255,255,255,0.14);}
+  .card .tier-label{font-family:'IBM Plex Mono', monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft);}
+  .card.featured .tier-label{color:#9CC1A5;}
+  .card h3{margin:10px 0 6px; font-size:1.4rem;}
+  .card .price{font-family:'Fraunces',serif; font-weight:700; font-size:1.9rem; margin-bottom:14px;}
+  .card .price span{font-family:'Work Sans',sans-serif; font-size:0.85rem; font-weight:500; color:var(--ink-soft);}
+  .card .desc{font-size:0.92rem; color:var(--ink-soft); margin-bottom:22px;}
+  .feat-list{list-style:none; margin:0 0 28px; padding:0; flex:1;}
+  .feat-list li{
+    font-size:0.88rem; padding:10px 0; border-top:1px solid var(--line);
+  }
+  .feat-list li:first-child{border-top:none;}
+  .card .btn{justify-content:center; width:100%;}
+  .card.featured .btn-primary{background:var(--amber); color:var(--forest-deep);}
+
+  /* ---- Testimonials ---- */
+  .testimonials{padding:96px 0;}
+  .t-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:900px){ .t-grid{grid-template-columns:1fr;} }
+  .t-card{
+    background:var(--paper);
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+    padding:26px 24px;
+  }
+  .t-card p.quote{font-size:0.98rem; margin:0 0 18px; color:var(--ink);}
+  .t-card .who{font-family:'IBM Plex Mono', monospace; font-size:0.75rem; color:var(--ink-soft);}
+
+  /* ---- About coach ---- */
+  .about{background:var(--forest); color:var(--paper); padding:96px 0;}
+  .about .wrap{display:grid; grid-template-columns:0.4fr 0.6fr; gap:56px; align-items:center;}
+  @media (max-width:800px){ .about .wrap{grid-template-columns:1fr;} }
+  .avatar{
+    width:100%; aspect-ratio:1; border-radius:50%;
+    background:linear-gradient(135deg, var(--amber), var(--coral));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces',serif; font-weight:700; font-size:3rem; color:var(--forest-deep);
+    max-width:260px;
+  }
+  .about h2{font-size:clamp(1.7rem,3vw,2.2rem); margin-bottom:16px; color:var(--paper);}
+  .about p{color:#DCE6DE; font-size:1rem; margin-bottom:14px; max-width:56ch;}
+  .about .cred{font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:#9CC1A5; margin-bottom:20px;}
+
+  /* ---- Final CTA ---- */
+  .final-cta{padding:110px 0; text-align:center;}
+  .final-cta h2{font-size:clamp(2rem,4vw,3rem); margin:0 0 20px;}
+  .final-cta p{color:var(--ink-soft); max-width:46ch; margin:0 auto 36px;}
+  .final-cta .cta-row{justify-content:center;}
+
+  /* ---- Footer ---- */
+  footer{border-top:1px solid var(--line); padding:40px 0;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  footer .logo{font-size:1.05rem;}
+  footer .flinks{display:flex; gap:24px; list-style:none; margin:0; padding:0; font-size:0.85rem;}
+  footer .flinks a{text-decoration:none;}
+  footer .fine{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--ink-soft); margin-top:8px;}
+
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <div class="logo">Lift <em>Forever</em></div>
+      <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cta" class="nav-cta">Book a free consult</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Online personal training</span>
+      <h1>Strong looks different on everyone<br><span class="accent">Let’s find yours</span><br></h1>
+      <p class="lede">No fitness background required. No home gym required. Just a coach in your corner, a plan built around your actual life, and small lifts that add up — for good, this time.</p>
+      <div class="cta-row">
+        <a href="#cta" class="btn btn-primary">Book a free consult →</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <p class="trust-line">CERTIFIED PERSONAL TRAINER · 100% VIRTUAL · CHECK-INS THAT ACTUALLY HAPPEN</p>
+    </div>
+    <div class="lift-graph">
+      <div class="cap"><span>Consistency, tracked</span><span>12 weeks</span></div>
+      <div class="bars" id="bars"></div>
+      <p class="caption">This is what results actually look like: <strong>small, steady lifts</strong> — not a straight line, not a miracle month. Just forever.</p>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="wrap">
+    <div class="grid">
+      <div class="reveal">
+        <span class="mark">01</span>
+        <h3>You don't have to be "advanced" to start.</h3>
+        <p>Every program starts from where you actually are, not where a workout app assumes you should be.</p>
+      </div>
+      <div class="reveal">
+        <span class="mark">02</span>
+        <h3>You don't need a home gym.</h3>
+        <p>Bodyweight, bands, dumbbells, a commercial gym — plans built around your equipment, not the other way around.</p>
+      </div>
+      <div class="reveal">
+        <span class="mark">03</span>
+        <h3>You need someone who notices when you go quiet.</h3>
+        <p>Real check-ins, real adjustments. If a week goes sideways, the plan bends — it doesn't just sit there judging you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps. No guesswork.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="num">01</span>
+        <h3>Free consult</h3>
+        <p>A real conversation about your goals, your schedule, and what's actually gotten in the way before.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">02</span>
+        <h3>Custom program</h3>
+        <p>Training plan built for your equipment and time, with nutrition guidance that fits your plate — vegan or not.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">03</span>
+        <h3>Weekly check-ins</h3>
+        <p>Form checks over video, honest feedback, and a plan that adjusts as your life does.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">04</span>
+        <h3>Keep lifting</h3>
+        <p>We recalibrate every few weeks so progress doesn't stall — and doesn't burn you out either.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Programs</span>
+      <h2>Pick a level of support, not a level of difficulty.</h2>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <span class="tier-label">Foundations</span>
+        <h3>Start</h3>
+        <div class="price">$89<span> / month</span></div>
+        <p class="desc">For anyone who wants a clear plan and doesn't need daily hand-holding.</p>
+        <ul class="feat-list">
+          <li>Custom training program</li>
+          <li>Bi-weekly check-in</li>
+          <li>Exercise video library</li>
+          <li>Message support, 48hr reply</li>
+        </ul>
+        <a href="#cta" class="btn btn-ghost">Get started</a>
+      </div>
+      <div class="card featured reveal">
+        <span class="tier-label">Most popular</span>
+        <h3>Build</h3>
+        <div class="price">$159<span> / month</span></div>
+        <p class="desc">The full partnership — for people ready to make this stick.</p>
+        <ul class="feat-list">
+          <li>Everything in Start</li>
+          <li>Weekly check-in + form review</li>
+          <li>Nutrition guidance</li>
+          <li>Message support, same-day reply</li>
+          <li>Plan adjusts every 3 weeks</li>
+        </ul>
+        <a href="#cta" class="btn btn-primary">Get started</a>
+      </div>
+      <div class="card reveal">
+        <span class="tier-label">1-on-1</span>
+        <h3>Thrive</h3>
+        <div class="price">$249<span> / month</span></div>
+        <p class="desc">Live sessions, for people who train better with someone watching the clock.</p>
+        <ul class="feat-list">
+          <li>Everything in Build</li>
+          <li>2 live virtual sessions / week</li>
+          <li>Direct messaging, daily</li>
+          <li>Priority scheduling</li>
+        </ul>
+        <a href="#cta" class="btn btn-ghost">Get started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">From people who started exactly like you</span>
+      <h2>Not athletes. Just consistent.</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <p class="quote">"Thanks to Mat’s training, the Joker doesn’t stand a chance."</p>
+        <div class="who">— Batman, Build program, 7 months in</div>
+      </div>
+      <div class="t-card reveal">
+       <p class="quote">"I was worried about the workouts taking forever, but they’re over in a me."</p>
+        <div class="who">— The Flash, Foundations program, 1 year in</div>
+      </div>
+      <div class="t-card reveal">
+         <p class="quote">"Wow, I am so glad that I made the choice to sign up."</p>
+        <div class="who">— You, 4 months from now</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="avatar">LF</div>
+    <div>
+      <span class="eyebrow" style="color:#9CC1A5;">Your coach</span>
+      <h2>Hi, I'm Mat.</h2>
+      <p class="cred">CERTIFIED PERSONAL TRAINER</p>
+      <p>I got into this work because I've seen too many people get scared off fitness by programs built for people who were already fit. Lift Forever exists for everyone else — the person starting from zero, coming back after a long break, or just tired of plans that don't fit their actual life.</p>
+      <p>Every program is built around you: your schedule, your equipment, your relationship with food. My job is to make the next lift a little easier than the last one — and to still be doing this with you a year from now.</p>
+      <a href="#cta" class="btn btn-primary">Book a free consult →</a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="cta">
+  <div class="wrap">
+    <span class="eyebrow">Ready when you are</span>
+    <h2>Your first lift is a 20-minute call.</h2>
+    <p>No pressure, no sales script — just a conversation about where you're starting from and whether this is a good fit.</p>
+    <div class="cta-row">
+      <a href="#" class="btn btn-primary">Book your free consult →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo">Lift <em>Forever</em></div>
+      <div class="fine">© 2026 Lift Forever. Online personal training.</div>
+    </div>
+    <ul class="flinks">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Build the signature "lift" bar graph: 12 bars, gently ascending with noise,
+  // last bar lit as the "current" week.
+  const barsEl = document.getElementById('bars');
+  const heights = [22,18,30,26,38,34,46,42,55,50,64,78];
+  heights.forEach((h, i) => {
+    const bar = document.createElement('div');
+    bar.className = 'bar' + (i === heights.length - 1 ? ' lit' : '');
+    bar.style.height = '8%';
+    if (i % 3 === 0) {
+      const label = document.createElement('span');
+      label.textContent = 'wk ' + (i + 1);
+      bar.appendChild(label);
+    }
+    barsEl.appendChild(bar);
+  });
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      const barEls = barsEl.querySelectorAll('.bar');
+      barEls.forEach((bar, i) => {
+        setTimeout(() => { bar.style.height = heights[i] + '%'; }, i * 60);
+      });
+    }, 150);
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
