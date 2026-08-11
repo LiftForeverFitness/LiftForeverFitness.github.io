@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Free Consult — Lift Forever</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F3EFE3;
+    --paper:#FBF8F1;
+    --forest:#1E3A2B;
+    --forest-deep:#152B20;
+    --amber:#E8A63D;
+    --coral:#F0603F;
+    --ink:#20241D;
+    --ink-soft:#4B5045;
+    --line: rgba(32,36,29,0.12);
+    --radius: 4px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  a{color:inherit;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  /* ---- NAV ---- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,239,227,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 0;
+  }
+  .logo{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.35rem;
+  }
+  .logo em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--coral);
+  }
+  .nav-links{display:flex; gap:32px; align-items:center; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    text-decoration:none; font-weight:500; font-size:0.95rem;
+    padding-bottom:2px; border-bottom:1px solid transparent;
+    transition:border-color .2s ease;
+  }
+  .nav-links a:hover{border-color:var(--ink);}
+  .nav-cta{
+    display:inline-block;
+    background:var(--forest);
+    color:var(--paper);
+    padding:10px 20px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.9rem;
+    transition:transform .15s ease, background .2s ease;
+  }
+  .nav-cta:hover{background:var(--forest-deep); transform:translateY(-1px);}
+  @media (max-width:800px){
+    .nav-links{display:none;}
+  }
+
+  /* ---- Page header ---- */
+  .page-head{padding:64px 0 8px;}
+  .page-head .eyebrow{margin-bottom:14px; display:block;}
+  .page-head h1{font-size:clamp(2rem, 4vw, 2.9rem); line-height:1.1; margin-bottom:16px;}
+  .page-head p{color:var(--ink-soft); font-size:1.05rem; max-width:52ch;}
+
+  /* ---- Form section ---- */
+  .form-section{padding:48px 0 110px;}
+  .form-section .wrap{
+    display:grid;
+    grid-template-columns:0.55fr 0.45fr;
+    gap:56px;
+    align-items:start;
+  }
+  @media (max-width:900px){
+    .form-section .wrap{grid-template-columns:1fr;}
+  }
+
+  form{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:36px;
+  }
+  @media (max-width:640px){ form{padding:26px 22px;} }
+
+  .field{margin-bottom:22px;}
+  .field label{
+    display:block;
+    font-weight:600;
+    font-size:0.92rem;
+    margin-bottom:8px;
+  }
+  .field .hint{
+    font-size:0.8rem;
+    color:var(--ink-soft);
+    margin-top:6px;
+  }
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  @media (max-width:520px){ .two-col{grid-template-columns:1fr;} }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea{
+    width:100%;
+    font-family:'Work Sans', sans-serif;
+    font-size:0.98rem;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--cream);
+    color:var(--ink);
+  }
+  input:focus, select:focus, textarea:focus{
+    outline:none;
+    border-color:var(--forest);
+  }
+  textarea{resize:vertical; min-height:110px;}
+
+  fieldset{
+    border:none;
+    padding:0;
+    margin:0;
+  }
+  fieldset legend{
+    font-weight:600;
+    font-size:0.92rem;
+    margin-bottom:10px;
+    padding:0;
+  }
+  .radio-row, .check-row{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .radio-row label, .check-row label{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-weight:400;
+    font-size:0.94rem;
+    cursor:pointer;
+  }
+  .radio-row input, .check-row input{
+    margin-top:3px;
+    accent-color:var(--forest);
+  }
+
+  .submit-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 28px;
+    border-radius:var(--radius);
+    font-weight:600;
+    font-size:0.98rem;
+    background:var(--coral);
+    color:var(--paper);
+    border:none;
+    cursor:pointer;
+    transition:transform .15s ease, background .2s ease;
+    width:100%;
+    justify-content:center;
+    font-family:'Work Sans', sans-serif;
+  }
+  .submit-btn:hover{transform:translateY(-2px); background:#e0532f;}
+  .submit-btn:disabled{opacity:0.6; cursor:not-allowed; transform:none;}
+
+  .form-note{
+    font-size:0.8rem;
+    color:var(--ink-soft);
+    margin-top:16px;
+    text-align:center;
+  }
+
+  #form-status{
+    display:none;
+    margin-top:18px;
+    padding:14px 16px;
+    border-radius:var(--radius);
+    font-size:0.92rem;
+  }
+  #form-status.success{
+    display:block;
+    background:rgba(30,58,43,0.08);
+    color:var(--forest-deep);
+    border:1px solid rgba(30,58,43,0.2);
+  }
+  #form-status.error{
+    display:block;
+    background:rgba(240,96,63,0.08);
+    color:#b8391f;
+    border:1px solid rgba(240,96,63,0.25);
+  }
+
+  /* ---- Side panel ---- */
+  .side-panel{
+    background:var(--forest);
+    color:var(--paper);
+    border-radius:8px;
+    padding:36px 32px;
+    position:sticky;
+    top:100px;
+  }
+  .side-panel .eyebrow{color:#9CC1A5; margin-bottom:14px; display:block;}
+  .side-panel h3{font-size:1.3rem; margin-bottom:16px; color:var(--paper);}
+  .side-panel ul{
+    list-style:none;
+    margin:0 0 24px;
+    padding:0;
+  }
+  .side-panel li{
+    display:flex;
+    gap:12px;
+    padding:14px 0;
+    border-top:1px solid rgba(255,255,255,0.14);
+    font-size:0.92rem;
+    color:#DCE6DE;
+  }
+  .side-panel li:first-child{border-top:none;}
+  .side-panel li .dot{
+    color:var(--amber);
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    flex-shrink:0;
+  }
+  .side-panel .quote{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.05rem;
+    line-height:1.5;
+    color:#DCE6DE;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.14);
+  }
+  .side-panel .quote .who{
+    display:block;
+    margin-top:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-style:normal;
+    font-size:0.75rem;
+    color:#9CC1A5;
+  }
+
+  /* ---- Footer ---- */
+  footer{border-top:1px solid var(--line); padding:40px 0;}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  footer .logo{font-size:1.05rem;}
+  footer .flinks{display:flex; gap:24px; list-style:none; margin:0; padding:0; font-size:0.85rem;}
+  footer .flinks a{text-decoration:none;}
+  footer .fine{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--ink-soft); margin-top:8px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="logo">Lift <em>Forever</em></a>
+      <ul class="nav-links">
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="consult.html" class="nav-cta">Book a free consult</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Free 20-minute consult</span>
+    <h1>Let's talk about where you're starting from.</h1>
+    <p>Fill this out and Mat will follow up to find a time that works. No pressure, no sales script — just a conversation about your goals and whether this is a good fit.</p>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="wrap">
+    <form id="consult-form" method="POST" action="https://formspree.io/f/xvkpawdk">
+
+      <div class="two-col">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="field">
+          <label for="phone">Phone <span style="font-weight:400;color:var(--ink-soft);">(optional)</span></label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="field">
+          <label for="location">City / time zone</label>
+          <input type="text" id="location" name="location" placeholder="e.g. Halifax, NS (AT)" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <fieldset>
+          <legend>Where are you starting from?</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="starting_point" value="Never lifted before" required> Never lifted before</label>
+            <label><input type="radio" name="starting_point" value="Coming back after a long break"> Coming back after a long break</label>
+            <label><input type="radio" name="starting_point" value="Training somewhat consistently, want more structure"> Training somewhat consistently, want more structure</label>
+            <label><input type="radio" name="starting_point" value="Experienced, looking for a coach"> Experienced, looking for a coach</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field">
+        <fieldset>
+          <legend>What do you have to work with?</legend>
+          <div class="check-row">
+            <label><input type="checkbox" name="equipment" value="Full commercial gym"> Full commercial gym</label>
+            <label><input type="checkbox" name="equipment" value="Home gym / dumbbells"> Home gym / dumbbells</label>
+            <label><input type="checkbox" name="equipment" value="Bands only"> Bands only</label>
+            <label><input type="checkbox" name="equipment" value="Bodyweight only, no equipment"> Bodyweight only, no equipment</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="field">
+        <label for="program">Program you're most interested in</label>
+        <select id="program" name="program_interest" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Foundations - $89/month">Foundations — $89/month</option>
+          <option value="Build - $159/month">Build — $159/month</option>
+          <option value="Thrive - $249/month">Thrive — $249/month</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="goals">What are you hoping to get out of this?</label>
+        <textarea id="goals" name="goals" placeholder="Goals, past experience, anything that's gotten in the way before — whatever feels useful to share."></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="New consult request — Lift Forever">
+
+      <button type="submit" class="submit-btn">Send my request →</button>
+      <p class="form-note">Mat typically replies within 1–2 business days.</p>
+
+      <div id="form-status"></div>
+    </form>
+
+    <aside class="side-panel">
+      <span class="eyebrow">What happens next</span>
+      <h3>Your first lift is a 20-minute call.</h3>
+      <ul>
+        <li><span class="dot">01</span> Mat reviews your answers and follows up to find a time.</li>
+        <li><span class="dot">02</span> You hop on a 20-minute video call — no pitch, just a conversation.</li>
+        <li><span class="dot">03</span> If it's a fit, your custom program gets built around your life.</li>
+      </ul>
+      <p class="quote">"I was worried about the workouts taking forever, but they're over in a me."<span class="who">— The Flash, Foundations program, 1 year in</span></p>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo">Lift <em>Forever</em></div>
+      <div class="fine">© 2026 Lift Forever. Online personal training.</div>
+    </div>
+    <ul class="flinks">
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#programs">Programs</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('consult-form');
+  const statusEl = document.getElementById('form-status');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    statusEl.className = '';
+    statusEl.textContent = '';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        statusEl.className = 'success';
+        statusEl.textContent = "Thanks — your request is in. Mat will be in touch soon.";
+        form.reset();
+        submitBtn.textContent = 'Sent ✓';
+      } else {
+        const data = await response.json().catch(() => null);
+        statusEl.className = 'error';
+        statusEl.textContent = (data && data.errors)
+          ? data.errors.map(err => err.message).join(', ')
+          : "Something went wrong. Please try again, or email directly.";
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send my request →';
+      }
+    } catch (err) {
+      statusEl.className = 'error';
+      statusEl.textContent = "Something went wrong. Please try again, or email directly.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send my request →';
+    }
+  });
+</script>
+
+</body>
+</html>
